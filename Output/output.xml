@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.9.7 on win32)" generated="20220608 16:17:53.097" rpa="false" schemaversion="3">
+<suite id="s1" name="Browser" source="C:\Users\Randy\Desktop\Vietnam\Neo4j\TestCase\browser.robot">
+<test id="s1-t1" name="Open Browser" line="14">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220608 16:17:53.389" level="INFO">Opening browser 'chrome' to base url 'https://landy510.github.io/Display_Vue_porfolio/#/lecture/LectureProduct'.</msg>
+<status status="PASS" starttime="20220608 16:17:53.388" endtime="20220608 16:17:59.062"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220608 16:17:59.063" endtime="20220608 16:17:59.186"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${SEARCH_ELEMENT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220608 16:17:59.187" endtime="20220608 16:17:59.198"/>
+</kw>
+<status status="PASS" starttime="20220608 16:17:53.388" endtime="20220608 16:17:59.198"/>
+</test>
+<test id="s1-t2" name="Proceed GET Method" line="18">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${header}</var>
+<arg>user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20220608 16:17:59.200" level="INFO">${header} = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36'}</msg>
+<status status="PASS" starttime="20220608 16:17:59.200" endtime="20220608 16:17:59.200"/>
+</kw>
+<kw name="GET" library="RequestsLibrary">
+<var>${resp}</var>
+<arg>${GET_ENDPOINTURL}</arg>
+<arg>headers=${header}</arg>
+<doc>Sends a GET request.</doc>
+<msg timestamp="20220608 16:18:00.172" level="INFO">GET Request : url=https://vue-course-api.hexschool.io/api/mrchenrandy/products/all 
+ path_url=/api/mrchenrandy/products/all 
+ headers={'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.63 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20220608 16:18:00.172" level="INFO">GET Response : url=https://vue-course-api.hexschool.io/api/mrchenrandy/products/all 
+ status=200, reason=OK 
+ headers={'Date': 'Wed, 08 Jun 2022 08:17:59 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'x-amzn-requestid': 'ed94a1d1-d5b2-4943-81c4-c8e5d4fb8aa2', 'ratelimit-remaining': '79', 'ratelimit-limit': '80', 'x-amzn-remapped-content-length': '10043', 'x-amz-apigw-id': 'TZMwsGrKIAMFyPQ=', 'vary': 'Origin', 'etag': 'W/"273b-mGHX7lEqe+ntOkRGIjYlD9H5OT8"', 'x-powered-by': 'Express', 'x-amzn-trace-id': 'Root=1-62a05b37-088702f600c843cc0704a0d5;Sampled=0', 'ratelimit-reset': '57', 'access-control-allow-credentials': 'true', 'CF-Cache-Status': 'DYNAMIC', 'Expect-CT': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=tIp7t5m1SDWbi00PlEXmrNgeqU40dWqrkUlAS3s3DqWNOoPT1Rp3cnXnq94Or7rft7zSUm4rj07dW5M7tykErdSGevOAq2m977j0VrX8Zm4wfENITP4D0w%2BgdxUYNCDjne%2FnQVDI%2BC%2FnDY9WA2U%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '718031b6ad4c0adc-NRT', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400, h3-29=":443"; ma=86400'} 
+ body={"success":true,"products":[{"category":"有氧","content":"&lt;h5 class=\"mb-0 font-weight-bold\"&gt;課程的好處&lt;/h5&gt;\n&lt;ul class=\"list-group\"&gt;\n&lt;li class=\"list-group-item p-0 border-0\"&gt;1. 有益於人的心血管健康&lt;/li&gt;\n&lt;li class=\"list-group-item p-0 border-0\"&gt;2. 可以有消滅脂肪&lt;/li&gt;\n&lt;li class=\"list-group-item p-0 border-0\"&gt;3. 可以有效釋放平日累積的壓力&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h5 class=\"mb-0 mt-2 font-weight-bold\"&gt;課程的安排&lt;/h5&gt;\n&lt;p&gt;我們在心肺訓練的課程中，會安排平板交替提膝抬腿、寬蹲式蹲跳起、TABATA ...等等，各種有系統性的心肺訓練，藉此來提升您的心肺能力。&lt;/p&gt;","description":"用不同課程來訓練您的心肺","id":"-MUqjQoTUlmL3b8PZN8Q","imageUrl":"https://i.postimg.cc/nz8fdtLT/whZ7A8.jpg","is_enabled":1,"num":11,"origin_price":"900","price":"700","title":"心肺訓練","unit":"堂"},{"category":"有氧","content":"&lt;h5 class=\"mb-0 font-weight-bold\"&gt;課程的好處&lt;/h5&gt;\n&lt;ul class=\"list-group\"&gt;\n&lt;li class=\"list-group-item p-0 border-0\"&gt;1. 有助減緩生理期的疼痛&lt;/li&gt;\n&lt;li class=\"list-group-item p-0 border-0\"&gt;2. 可提高骨質&lt;/li&gt;\n&lt;li class=\"list-group-item p-0 border-0\"&gt;3. 改善心血管系統的功能&lt;/li&gt;\n&lt;li class=\"list-group-item p-0 border-0\"&gt;4. 提高呼吸系統的機能&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h5 class=\"mb-0 mt-2 font-weight-bold\"&gt;課程的安排&lt;/h5&gt;\n&lt;p&gt;本課程會從最基本的水中呼吸、打水、換氣...等等的基本游泳動作教起，等到此些基礎動作都到一定程度以後，就會開始教導您各種不一樣的游泳方式，像是自由式、蛙式...等等的游泳技巧，讓您可以穩健又紮實的學會如何游泳。&lt;/p&gt;","description":"初級的游泳課程，從打水開始教起","id":"-MUqjjwVcjvyaPTTH6LG","imageUrl":"https://i.postimg.cc/Yq8ktVXq/147Uos.jpg","is_enabled":1,"num":10,"origin_price":"3000","price":"2500","title":"游泳 Swim","unit":"堂"},{"category":"有氧","content":"&lt;h5 class=\"mb-0 font-weight-bold\"&gt;課程的好處&lt;/h5&gt;\n&lt;ul class=\"list-group\"&gt;\n&lt;li class=\"list-group-item p-0 border-0\"&gt;1. 燃燒脂肪&lt;/li&gt;\n&lt;li class=\"list-group-item p-0 border-0\"&gt;2. 增強肌肉&lt;/li&gt;\n&lt;li class=\"list-group-item p-0 border-0\"&gt;3. 學習到基本的防身技巧&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h5 class=\"mb-0 mt-2 font-weight-bold\"&gt;課程的安排&lt;/h5&gt;\n&lt;p&gt;透過現場教練的評估，來評斷您的程度是何哪種程度的課程，若是拳擊小白，我們會教導您正確的站姿與基本的組合拳的技巧。若您是有一定程度以上的學員，就會安排您跟其他學員互相對練，讓您可以充分地將課堂上的技巧運用到練習賽上。&lt;/p&gt;","description":"拳擊初級課程，有教導組合拳喔~","id":"-MUqkAvqPGJxbyYoIWM8","imageUrl":"https://i.postimg.cc/J0LmhWVt/6lcXf2.jpg","is_enabled":1,"num":9,"origin_price":"2500","price":"2000","title":"拳擊 boxing","unit":"堂"},{"category":"有氧","content":"&lt;h5 class=\"mb-0 font-weight-bold\"&gt;課程的好處&lt;/h5&gt;\n&lt;ul class=\"list-group\"&gt;\n&lt;li class=\"list-group-item p-0 border-0\"&gt;1. 溫和的強化肌肉&lt;/li&gt;\n&lt;li class=\"list-group-item p-0 border-0\"&gt;2. 提升柔軟度&lt;/li&gt;\n&lt;li class=\"list-group-item p-0 border-0\"&gt;3. 讓您的身心靈更健康&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h5 class=\"mb-0 mt-2 font-weight-bold\"&gt;課程的安排&lt;/h5&gt;\n&lt;p&gt;我們會根據您的體能狀況去分配強度適合您的瑜珈課程，您就配合著課程中教導的內容，一起學習，您就可以感覺到身體體能的進步，並可以有效排解您的身體壓力。&lt;/p&gt;","description":"讓您擁有平衡的身心靈的課程","id":"-MUqkXBWfo0FJaXxM0Yf","imageUrl":"https://i.postimg.cc/DfLw3xk8/phwWGl.jpg","is_enabled":1,"num":8,"origin_price":"3500","price":"1000","title":"瑜珈課程","unit":"堂"},{"category":"有氧","content":"&lt;h5 class=\"mb-0 font-weight-bold\"&gt;課程的好處&lt;/h5&gt;\n&lt;ul class=\"list-group\"&gt;\n&lt;li class=\"list-group-item p-0 border-0\"&gt;1. 讓您的跑步更加專業&lt;/li&gt;\n&lt;li class=\"list-group-item p-0 border-0\"&gt;2. 可以完成至少10公里以上的比賽&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h5 class=\"mb-0 mt-2 font-weight-bold\"&gt;課程的安排&lt;/h5&gt;\n&lt;p&gt;本課程是跑步課程的進階課程，您需先上過本公司的跑步課程之後，才建議您來選擇本進階的跑步課程。在本課程中會有專業的教練，教導您如何在各種距離下去配置您的跑速，讓您在適當的配速下完成各種大小的比賽，成為一個更專業的跑者。&lt;/p&gt;","description":"進階的跑步課程","id":"-MUqktQ1bYXLFehU4tnh","imageUrl":"https://i.postimg.cc/BvbvWs40/6FrOwk.jpg","is_enabled":1,"num":7,"origin_price":"2000","price":"1500","title":"自由馬拉松","unit":"堂"},{"category":"重訓","content":"&lt;h5 class=\"mb-0 font-weight-bold\"&gt;課程的好處&lt;/h5&gt;\n&lt;ul class=\"list-group\"&gt;\n&lt;li class=\"list-group-item p-0 border-0\"&gt;1. 強化你的下肢肌肉&lt;/li&gt;\n&lt;li class=\"list-group-item p-0 border-0\"&gt;2. 可消耗大量的卡路里，讓你可以吃得更多&lt;/li&gt;\n&lt;li class=\"list-group-item p-0 border-0\"&gt;3. 提升你的爆發力&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h5 class=\"mb-0 mt-2 font-weight-bold\"&gt;課程的安排&lt;/h5&gt;\n&lt;p&gt;我們會教導您如何高背槓深蹲的正確操作技巧，如果，您的身體能力允許，我們專業的教練會進一步教您如何操作低背槓深蹲，讓您可以蹲得更深，蹲得更重。&lt;/p&gt;","description":"讓您擁有緊實臀腿的課程","id":"-MUqlKrI1eXO1suVa2Lp","imageUrl":"https://i.postimg.cc/FFBgwsv9/3ezsnD.jpg","is_enabled":1,"num":6,"origin_price":"5000","price":"2500","title":"深蹲 Squat","unit":"堂"},{"category":"飲食課程","content":"&lt;h5 class=\"mb-1 font-weight-bold\"&gt;課程的好處&lt;/h5&gt;\n&lt;ul class=\"list-group\"&gt;\n&lt;li class=\"list-group-item p-0 border-0\"&gt;1. 擁有正確的飲食觀念&lt;/li&gt;\n&lt;li class=\"list-group-item p-0 border-0\"&gt;2. 知道如何分辨好的食材&lt;/li&gt;\n&lt;li class=\"list-group-item p-0 border-0\"&gt;3. 學習如何判讀食品的健康標示&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h5 class=\"mb-1 mt-2 font-weight-bold\"&gt;課程的安排&lt;/h5&gt;\n&lt;p&gt;在本課程中，教練會先檢視您一周的飲食習慣，並建議您應該如何修正的飲食內容。接著，教導您如何計算您的TDEE，透過TDEE讓您知道您一天所需攝取的營養素占比為何，進而去規劃最適合您的飲食習慣。&lt;/p&gt;","description":"均衡飲食控制課程","id":"-MUqledwgxOpKWTE1YFI","imageUrl":"https://i.postimg.cc/dtMD7LcN/lily-banse-YHSwy6uqvk-unsplash.jpg","is_enabled":1,"num":5,"origin_price":"500","price":"150","title":"均衡飲食","unit":"餐"},{"category":"重訓","content":"&lt;h5 class=\"mb-0 font-weight-bold\"&gt;課程的好處&lt;/h5&gt;\n&lt;ul class=\"list-group\"&gt;\n&lt;li class=\"list-group-item p-0 border-0\"&gt;1. 鍛鍊全身肌群&lt;/li&gt;\n&lt;li class=\"list-group-item p-0 border-0\"&gt;2. 增加力量&lt;/li&gt;\n&lt;li class=\"list-group-item p-0 border-0\"&gt;3. 預防下背痛&lt;/li&gt;\n&lt;li class=\"list-group-item p-0 border-0\"&gt;4. 有效率的鍛鍊全身的肌群&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h5 class=\"mb-0 mt-2 font-weight-bold\"&gt;課程的安排&lt;/h5&gt;\n&lt;p&gt;我們會教導您傳統硬舉和相撲硬舉的正確操作步驟，等到您知道如何正確操作之後，就會安排漸進式強度的課表，如此，就可以提升您全身肌群的強度。&lt;/p&gt;","description":"全身性肌群的訓練","id":"-MUqm7FyjYfSCQ1fas9U","imageUrl":"https://i.postimg.cc/FRFVXY1K/3EOzWP.jpg","is_enabled":1,"num":4,"origin_price":"3000","price":"1500","title":"硬舉 DeadLift","unit":"堂"},{"category":"有氧","content":"&lt;h5 class=\"mb-0 font-weight-bold\"&gt;課程的好處&lt;/h5&gt;\n&lt;ul class=\"list-group\"&gt;\n&lt;li class=\"list-group-item p-0 border-0\"&gt;1. 對心臟功能好&lt;/li&gt;\n&lt;li class=\"list-group-item p-0 border-0\"&gt;2. 有助燃脂&lt;/li&gt;\n&lt;li class=\"list-group-item p-0 border-0\"&gt;3. 對核心肌群有益&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h5 class=\"mb-0 mt-2 font-weight-bold\"&gt;課程的安排&lt;/h5&gt;\n&lt;p&gt;在本課程中，會有其他的學員跟你一起上課。課堂教練會先用遊戲的方式讓您熟習跑步這項運動，接著，再教導並矯正您的跑姿，讓您可以跑得正確，跑得更遠。&lt;/p&gt;","description":"初級的跑步課程","id":"-MUqmvBaGduh6F80Zwdw","imageUrl":"https://i.postimg.cc/2yh6HwmL/S7TgVl.jpg","is_enabled":1,"num":3,"origin_price":"700","price":"500","title":"跑步","unit":"堂"},{"category":"重訓","content":"&lt;h5 class=\"mb-0 font-weight-bold\"&gt;課程的好處&lt;/h5&gt;\n&lt;ul class=\"list-group\"&gt;\n&lt;li class=\"list-group-item p-0 border-0\"&gt;1. 提升心肺的健康&lt;/li&gt;\n&lt;li class=\"list-group-item p-0 border-0\"&gt;2. 訓練上半身、核心腹部肌群&lt;/li&gt;\n&lt;li class=\"list-group-item p-0 border-0\"&gt;3. 改善有氧和無氧能力的潛力&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h5 class=\"mb-0 mt-2 font-weight-bold\"&gt;課程的安排&lt;/h5&gt;\n&lt;p&gt;如果你是一位健身小白的話，我們會先用低強度的有氧訓練計畫，來初步提升您的心肺能力，等到您的心肺能力達到一定基礎，我們就會接著用間歇性運動的訓練，讓您的心肺更加提升。&lt;/p&gt;","description":"高強度間歇性訓練","id":"-MUqnbovbkkwsuzuAZr3","imageUrl":"https://i.postimg.cc/KcqJFDPh/HRgYB3.jpg","is_enabled":1,"num":2,"origin_price":"1000","price":"500","title":"戰繩訓練","unit":"堂"},{"category":"重訓","content":"&lt;h5 class=\"mb-0 font-weight-bold\"&gt;課程的好處&lt;/h5&gt;\n&lt;ul class=\"list-group\"&gt;\n&lt;li class=\"list-group-item p-0 border-0\"&gt;1. 反應能力提升&lt;/li&gt;\n&lt;li class=\"list-group-item p-0 border-0\"&gt;2. 運動表現有所提升&lt;/li&gt;\n&lt;li class=\"list-group-item p-0 border-0\"&gt;3. 提升你的爆發力&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h5 class=\"mb-0 mt-2 font-weight-bold\"\"&gt;課程的安排&lt;/h5&gt;\n&lt;p&gt;如果你是一位健身小白的話，我們會先提高臀腿肌群的訓練頻率，等到您的肌群強健之後，再提高訓練強度，進而來提升你的身體體能。&lt;/p&gt;","description":"提升你全身的爆發力","id":"-MUqnqH7fLOzX1IsJ8Ao","imageUrl":"https://i.postimg.cc/c4z97BCB/s3GHBq.jpg","is_enabled":1,"num":1,"origin_price":"3000","price":"1500","title":"挺舉 Clean and Jerk","unit":"堂"}]} 
+ </msg>
+<msg timestamp="20220608 16:18:00.174" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220608 16:17:59.201" endtime="20220608 16:18:00.174"/>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<var>${product_title_arr}</var>
+<arg>${resp.json()}[products]</arg>
+<arg>$..title</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<msg timestamp="20220608 16:18:00.202" level="INFO">${product_title_arr} = ['心肺訓練', '游泳 Swim', '拳擊 boxing', '瑜珈課程', '自由馬拉松', '深蹲 Squat', '均衡飲食', '硬舉 DeadLift', '跑步', '戰繩訓練', '挺舉 Clean and Jerk']</msg>
+<status status="PASS" starttime="20220608 16:18:00.175" endtime="20220608 16:18:00.202"/>
+</kw>
+<kw name="Convert To List" library="Collections">
+<var>@{product_title_list}</var>
+<arg>${product_title_arr}</arg>
+<doc>Converts the given ``item`` to a Python ``list`` type.</doc>
+<msg timestamp="20220608 16:18:00.203" level="INFO">@{product_title_list} = [ 心肺訓練 | 游泳 Swim | 拳擊 boxing | 瑜珈課程 | 自由馬拉松 | 深蹲 Squat | 均衡飲食 | 硬舉 DeadLift | 跑步 | 戰繩訓練 | 挺舉 Clean and Jerk ]</msg>
+<status status="PASS" starttime="20220608 16:18:00.202" endtime="20220608 16:18:00.203"/>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<arg>@{PRODUCT_TITLE_LIST}</arg>
+<arg>@{product_title_list}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<msg timestamp="20220608 16:18:00.203" level="INFO">@{PRODUCT_TITLE_LIST} = [ 心肺訓練 | 游泳 Swim | 拳擊 boxing | 瑜珈課程 | 自由馬拉松 | 深蹲 Squat | 均衡飲食 | 硬舉 DeadLift | 跑步 | 戰繩訓練 | 挺舉 Clean and Jerk ]</msg>
+<status status="PASS" starttime="20220608 16:18:00.203" endtime="20220608 16:18:00.204"/>
+</kw>
+<status status="PASS" starttime="20220608 16:17:59.199" endtime="20220608 16:18:00.204"/>
+</test>
+<test id="s1-t3" name="Iterate List and Check If Every Element Show On Page" line="24">
+<for flavor="IN">
+<var>${item}</var>
+<value>@{PRODUCT_TITLE_LIST}</value>
+<iter>
+<var name="${item}">心肺訓練</var>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SEARCH_ELEMENT}</arg>
+<arg>${item}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220608 16:18:00.206" level="INFO">Typing text '心肺訓練' into text field '//input[contains(@placeholder, 'Search')]'.</msg>
+<status status="PASS" starttime="20220608 16:18:00.206" endtime="20220608 16:18:00.287"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${SEARCH_ELEMENT}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220608 16:18:00.288" level="INFO">Sending key(s) ('ENTER',) to //input[contains(@placeholder, 'Search')] element.</msg>
+<msg timestamp="20220608 16:18:00.579" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20220608 16:18:00.579" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20220608 16:18:00.287" endtime="20220608 16:18:00.740"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//span[contains(text(), '${item}')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220608 16:18:00.740" endtime="20220608 16:18:01.845"/>
+</kw>
+<status status="PASS" starttime="20220608 16:18:00.206" endtime="20220608 16:18:01.845"/>
+</iter>
+<iter>
+<var name="${item}">游泳 Swim</var>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SEARCH_ELEMENT}</arg>
+<arg>${item}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220608 16:18:01.846" level="INFO">Typing text '游泳 Swim' into text field '//input[contains(@placeholder, 'Search')]'.</msg>
+<status status="PASS" starttime="20220608 16:18:01.845" endtime="20220608 16:18:01.938"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${SEARCH_ELEMENT}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220608 16:18:01.938" level="INFO">Sending key(s) ('ENTER',) to //input[contains(@placeholder, 'Search')] element.</msg>
+<msg timestamp="20220608 16:18:02.230" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20220608 16:18:02.230" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20220608 16:18:01.938" endtime="20220608 16:18:02.241"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//span[contains(text(), '${item}')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220608 16:18:02.241" endtime="20220608 16:18:02.251"/>
+</kw>
+<status status="PASS" starttime="20220608 16:18:01.845" endtime="20220608 16:18:02.251"/>
+</iter>
+<iter>
+<var name="${item}">拳擊 boxing</var>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SEARCH_ELEMENT}</arg>
+<arg>${item}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220608 16:18:02.252" level="INFO">Typing text '拳擊 boxing' into text field '//input[contains(@placeholder, 'Search')]'.</msg>
+<status status="PASS" starttime="20220608 16:18:02.251" endtime="20220608 16:18:02.325"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${SEARCH_ELEMENT}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220608 16:18:02.326" level="INFO">Sending key(s) ('ENTER',) to //input[contains(@placeholder, 'Search')] element.</msg>
+<msg timestamp="20220608 16:18:02.604" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20220608 16:18:02.604" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20220608 16:18:02.325" endtime="20220608 16:18:02.613"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//span[contains(text(), '${item}')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220608 16:18:02.613" endtime="20220608 16:18:02.623"/>
+</kw>
+<status status="PASS" starttime="20220608 16:18:02.251" endtime="20220608 16:18:02.623"/>
+</iter>
+<iter>
+<var name="${item}">瑜珈課程</var>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SEARCH_ELEMENT}</arg>
+<arg>${item}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220608 16:18:02.624" level="INFO">Typing text '瑜珈課程' into text field '//input[contains(@placeholder, 'Search')]'.</msg>
+<status status="PASS" starttime="20220608 16:18:02.624" endtime="20220608 16:18:02.686"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${SEARCH_ELEMENT}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220608 16:18:02.687" level="INFO">Sending key(s) ('ENTER',) to //input[contains(@placeholder, 'Search')] element.</msg>
+<msg timestamp="20220608 16:18:02.982" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20220608 16:18:02.982" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20220608 16:18:02.687" endtime="20220608 16:18:02.992"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//span[contains(text(), '${item}')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220608 16:18:02.992" endtime="20220608 16:18:03.001"/>
+</kw>
+<status status="PASS" starttime="20220608 16:18:02.624" endtime="20220608 16:18:03.001"/>
+</iter>
+<iter>
+<var name="${item}">自由馬拉松</var>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SEARCH_ELEMENT}</arg>
+<arg>${item}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220608 16:18:03.002" level="INFO">Typing text '自由馬拉松' into text field '//input[contains(@placeholder, 'Search')]'.</msg>
+<status status="PASS" starttime="20220608 16:18:03.002" endtime="20220608 16:18:03.062"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${SEARCH_ELEMENT}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220608 16:18:03.063" level="INFO">Sending key(s) ('ENTER',) to //input[contains(@placeholder, 'Search')] element.</msg>
+<msg timestamp="20220608 16:18:03.341" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20220608 16:18:03.341" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20220608 16:18:03.062" endtime="20220608 16:18:03.350"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//span[contains(text(), '${item}')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220608 16:18:03.350" endtime="20220608 16:18:03.360"/>
+</kw>
+<status status="PASS" starttime="20220608 16:18:03.002" endtime="20220608 16:18:03.360"/>
+</iter>
+<iter>
+<var name="${item}">深蹲 Squat</var>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SEARCH_ELEMENT}</arg>
+<arg>${item}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220608 16:18:03.360" level="INFO">Typing text '深蹲 Squat' into text field '//input[contains(@placeholder, 'Search')]'.</msg>
+<status status="PASS" starttime="20220608 16:18:03.360" endtime="20220608 16:18:03.428"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${SEARCH_ELEMENT}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220608 16:18:03.429" level="INFO">Sending key(s) ('ENTER',) to //input[contains(@placeholder, 'Search')] element.</msg>
+<msg timestamp="20220608 16:18:03.714" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20220608 16:18:03.715" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20220608 16:18:03.428" endtime="20220608 16:18:03.723"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//span[contains(text(), '${item}')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220608 16:18:03.723" endtime="20220608 16:18:03.733"/>
+</kw>
+<status status="PASS" starttime="20220608 16:18:03.360" endtime="20220608 16:18:03.733"/>
+</iter>
+<iter>
+<var name="${item}">均衡飲食</var>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SEARCH_ELEMENT}</arg>
+<arg>${item}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220608 16:18:03.734" level="INFO">Typing text '均衡飲食' into text field '//input[contains(@placeholder, 'Search')]'.</msg>
+<status status="PASS" starttime="20220608 16:18:03.733" endtime="20220608 16:18:03.793"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${SEARCH_ELEMENT}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220608 16:18:03.794" level="INFO">Sending key(s) ('ENTER',) to //input[contains(@placeholder, 'Search')] element.</msg>
+<msg timestamp="20220608 16:18:04.072" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20220608 16:18:04.072" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20220608 16:18:03.793" endtime="20220608 16:18:04.081"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//span[contains(text(), '${item}')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220608 16:18:04.082" endtime="20220608 16:18:04.092"/>
+</kw>
+<status status="PASS" starttime="20220608 16:18:03.733" endtime="20220608 16:18:04.092"/>
+</iter>
+<iter>
+<var name="${item}">硬舉 DeadLift</var>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SEARCH_ELEMENT}</arg>
+<arg>${item}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220608 16:18:04.093" level="INFO">Typing text '硬舉 DeadLift' into text field '//input[contains(@placeholder, 'Search')]'.</msg>
+<status status="PASS" starttime="20220608 16:18:04.092" endtime="20220608 16:18:04.188"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${SEARCH_ELEMENT}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220608 16:18:04.188" level="INFO">Sending key(s) ('ENTER',) to //input[contains(@placeholder, 'Search')] element.</msg>
+<msg timestamp="20220608 16:18:04.482" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20220608 16:18:04.482" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20220608 16:18:04.188" endtime="20220608 16:18:04.495"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//span[contains(text(), '${item}')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220608 16:18:04.495" endtime="20220608 16:18:04.506"/>
+</kw>
+<status status="PASS" starttime="20220608 16:18:04.092" endtime="20220608 16:18:04.506"/>
+</iter>
+<iter>
+<var name="${item}">跑步</var>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SEARCH_ELEMENT}</arg>
+<arg>${item}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220608 16:18:04.507" level="INFO">Typing text '跑步' into text field '//input[contains(@placeholder, 'Search')]'.</msg>
+<status status="PASS" starttime="20220608 16:18:04.506" endtime="20220608 16:18:04.561"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${SEARCH_ELEMENT}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220608 16:18:04.561" level="INFO">Sending key(s) ('ENTER',) to //input[contains(@placeholder, 'Search')] element.</msg>
+<msg timestamp="20220608 16:18:04.839" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20220608 16:18:04.839" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20220608 16:18:04.561" endtime="20220608 16:18:04.848"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//span[contains(text(), '${item}')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220608 16:18:04.849" endtime="20220608 16:18:04.860"/>
+</kw>
+<status status="PASS" starttime="20220608 16:18:04.506" endtime="20220608 16:18:04.860"/>
+</iter>
+<iter>
+<var name="${item}">戰繩訓練</var>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SEARCH_ELEMENT}</arg>
+<arg>${item}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220608 16:18:04.860" level="INFO">Typing text '戰繩訓練' into text field '//input[contains(@placeholder, 'Search')]'.</msg>
+<status status="PASS" starttime="20220608 16:18:04.860" endtime="20220608 16:18:04.920"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${SEARCH_ELEMENT}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220608 16:18:04.921" level="INFO">Sending key(s) ('ENTER',) to //input[contains(@placeholder, 'Search')] element.</msg>
+<msg timestamp="20220608 16:18:05.186" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20220608 16:18:05.186" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20220608 16:18:04.920" endtime="20220608 16:18:05.194"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//span[contains(text(), '${item}')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220608 16:18:05.195" endtime="20220608 16:18:05.204"/>
+</kw>
+<status status="PASS" starttime="20220608 16:18:04.860" endtime="20220608 16:18:05.204"/>
+</iter>
+<iter>
+<var name="${item}">挺舉 Clean and Jerk</var>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SEARCH_ELEMENT}</arg>
+<arg>${item}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220608 16:18:05.205" level="INFO">Typing text '挺舉 Clean and Jerk' into text field '//input[contains(@placeholder, 'Search')]'.</msg>
+<status status="PASS" starttime="20220608 16:18:05.204" endtime="20220608 16:18:05.307"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${SEARCH_ELEMENT}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220608 16:18:05.308" level="INFO">Sending key(s) ('ENTER',) to //input[contains(@placeholder, 'Search')] element.</msg>
+<msg timestamp="20220608 16:18:05.592" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20220608 16:18:05.592" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20220608 16:18:05.307" endtime="20220608 16:18:05.602"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//span[contains(text(), '${item}')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220608 16:18:05.602" endtime="20220608 16:18:05.611"/>
+</kw>
+<status status="PASS" starttime="20220608 16:18:05.204" endtime="20220608 16:18:05.611"/>
+</iter>
+<status status="PASS" starttime="20220608 16:18:00.206" endtime="20220608 16:18:05.611"/>
+</for>
+<status status="PASS" starttime="20220608 16:18:00.205" endtime="20220608 16:18:05.611"/>
+</test>
+<test id="s1-t4" name="Close Brower" line="30">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220608 16:18:05.613" endtime="20220608 16:18:07.834"/>
+</kw>
+<status status="PASS" starttime="20220608 16:18:05.612" endtime="20220608 16:18:07.835"/>
+</test>
+<doc>Common Keywords.</doc>
+<status status="PASS" starttime="20220608 16:17:53.099" endtime="20220608 16:18:07.836"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="Browser">Browser</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
